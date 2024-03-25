@@ -48,12 +48,12 @@
 		lat = localStorage.getItem('latitude');
 		lng = localStorage.getItem('longitude');
 		// Simulate loading time or wait for data
-		await new Promise((resolve) => setTimeout(resolve, 500)); // .5-second delay
+		await new Promise((resolve) => setTimeout(resolve, 100)); // .5-second delay
 
 		isLoading = false; // Hide loading state
 		setTimeout(() => {
 			goto('/choicePage', { state: { city: cityName, lat, lng, places: placeData } });
-		}, 2000); // Redirect after 2 seconds
+		}, 500); // Redirect after 2 seconds
 	});
 </script>
 
